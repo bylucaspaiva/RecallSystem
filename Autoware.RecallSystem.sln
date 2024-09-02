@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RecallSystem.Tests", "Recal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecallSystem.API", "RecallSystem.API\RecallSystem.API.csproj", "{FE8F7315-41CF-41A7-A979-466F8D6EE934}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecallSystem.Infrastructure", "RecallSystem.Infrastructure\RecallSystem.Infrastructure.csproj", "{2367EAF9-D5AE-40C6-8CBA-B45D443301EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,12 +27,17 @@ Global
 		{FE8F7315-41CF-41A7-A979-466F8D6EE934}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE8F7315-41CF-41A7-A979-466F8D6EE934}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE8F7315-41CF-41A7-A979-466F8D6EE934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2367EAF9-D5AE-40C6-8CBA-B45D443301EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2367EAF9-D5AE-40C6-8CBA-B45D443301EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2367EAF9-D5AE-40C6-8CBA-B45D443301EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2367EAF9-D5AE-40C6-8CBA-B45D443301EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FE8F7315-41CF-41A7-A979-466F8D6EE934} = {C5A64EC3-2CF7-4D1B-86D0-BCF72CE5375B}
+		{2367EAF9-D5AE-40C6-8CBA-B45D443301EB} = {0C3EC82A-4080-4DD9-8092-5FE97C005566}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C4A39196-C4E7-488B-859B-B42643F05C69}
