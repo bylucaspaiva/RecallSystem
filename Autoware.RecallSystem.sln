@@ -13,11 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RecallSystem.Domain", "Reca
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RecallSystem.Tests", "RecallSystem.Tests", "{5B22858D-D23D-4486-9C86-0AC8C384F68F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecallSystem.API", "RecallSystem.API\RecallSystem.API.csproj", "{FE8F7315-41CF-41A7-A979-466F8D6EE934}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecallSystem.API", "RecallSystem.API\RecallSystem.API.csproj", "{FE8F7315-41CF-41A7-A979-466F8D6EE934}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecallSystem.Infrastructure", "RecallSystem.Infrastructure\RecallSystem.Infrastructure.csproj", "{2367EAF9-D5AE-40C6-8CBA-B45D443301EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecallSystem.Infrastructure", "RecallSystem.Infrastructure\RecallSystem.Infrastructure.csproj", "{2367EAF9-D5AE-40C6-8CBA-B45D443301EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecallSystem.Domain", "RecallSystem.Domain\RecallSystem.Domain.csproj", "{0614ADFD-4589-403C-9126-BDEA4EF05B52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecallSystem.Domain", "RecallSystem.Domain\RecallSystem.Domain.csproj", "{0614ADFD-4589-403C-9126-BDEA4EF05B52}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecallSystem.Application", "RecallSystem.Application\RecallSystem.Application.csproj", "{BE1B8555-A80A-42DC-934A-E14E667C88D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecallSystem.Tests", "RecallSystem.Tests\RecallSystem.Tests.csproj", "{70599409-4833-430B-A3A2-3B52942E52F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,14 @@ Global
 		{0614ADFD-4589-403C-9126-BDEA4EF05B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0614ADFD-4589-403C-9126-BDEA4EF05B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0614ADFD-4589-403C-9126-BDEA4EF05B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE1B8555-A80A-42DC-934A-E14E667C88D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE1B8555-A80A-42DC-934A-E14E667C88D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE1B8555-A80A-42DC-934A-E14E667C88D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE1B8555-A80A-42DC-934A-E14E667C88D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70599409-4833-430B-A3A2-3B52942E52F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70599409-4833-430B-A3A2-3B52942E52F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70599409-4833-430B-A3A2-3B52942E52F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70599409-4833-430B-A3A2-3B52942E52F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +57,8 @@ Global
 		{FE8F7315-41CF-41A7-A979-466F8D6EE934} = {C5A64EC3-2CF7-4D1B-86D0-BCF72CE5375B}
 		{2367EAF9-D5AE-40C6-8CBA-B45D443301EB} = {0C3EC82A-4080-4DD9-8092-5FE97C005566}
 		{0614ADFD-4589-403C-9126-BDEA4EF05B52} = {1467F727-4D5A-4C68-ABC0-34125C889616}
+		{BE1B8555-A80A-42DC-934A-E14E667C88D2} = {CC54A04A-27D3-4336-801A-50562DB5642C}
+		{70599409-4833-430B-A3A2-3B52942E52F4} = {5B22858D-D23D-4486-9C86-0AC8C384F68F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C4A39196-C4E7-488B-859B-B42643F05C69}
