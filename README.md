@@ -1,22 +1,20 @@
 ﻿# Autoware.RecallSystem test
 
-Para rodar esse projeto clone o repositório e siga os passos a seguir:
+<div style="display: flex; justify-content: space-between;">
+  <img width="48%" alt="Imagem 1" src="https://github.com/user-attachments/assets/998fcbb9-f265-4e72-90d6-bfc416c4a982">
+  <img width="48%" alt="Imagem 2" src="https://github.com/user-attachments/assets/babc6623-5bf6-4e4a-8f0c-535580949183">
+</div>
 
-Adicionei um DataSeed para preencher as tabelas automaticamente, então  
-é necessário seguir apenas o passo 1 para criar a instância do SQL Server
+## Como executar o projeto
+Para rodar este projeto, siga os passos abaixo:
 
-Então é só buildar a solução e dar run. 🚀🚀
-
-
-
-Primeiro, crie o banco e suas tabelas seguindo os passos abaixo.
-
-Eu prefiro rodar servidores de bancos de dados em instâncias do docker,
-mas se já tiver um banco rodando é só pular para a parte das queries no passo 3.
+Clone o repositório para sua máquina local.
+Crie uma instância do SQL Server seguindo o passo 1 logo abaixo.
 
 (Estou usando o WSL2 então alguns comandos podem ser diferentes no Windows).
 
 ## 1. Criar instância de banco no docker
+
 O primeiro passo é rodar esse comando no seu terminal, e ele irá baixar e subir 
 a versão mais recente do sql server
 
@@ -25,7 +23,12 @@ docker run -v ~/docker --name sqlserver -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD
 
 ```
 
-Se não tiver acontecido nenhum erro agora existe uma instância do banco na porta 1433
+Se não tiver acontecido nenhum erro agora existe uma instância do banco na porta 1433.
+Um DataSeed foi adicionado para preencher as tabelas automaticamente, então é só rodar a aplicação 🚀🚀.
+
+
+Caso queira fazer manualmente o passo a passo está abaixo ⬇️⬇️
+
 
 ## 2. No seu cliente (estou usando Azure Data Studio)
 Para conectar ao banco é necessário escolher o tipo de autenticação certa:
@@ -78,7 +81,6 @@ INSERT INTO ExecucoesRecalls (RecallId, Chassi, DataExecucao, Concessionaria) VA
 (5, 'CHASSI234567890123', '2016-10-07', 'Velocity Auto Group');
 ```
 
-Pronto agora o banco está com as tabelas e os dados de exemplo dos arquivos JSON.
 
-Agora é necessário buildar a solução
+
 
