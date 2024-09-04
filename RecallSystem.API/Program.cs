@@ -25,7 +25,15 @@ builder.Services.AddCors(options =>
                           .AllowAnyHeader());
 });
 
+
+
 var app = builder.Build();
+
+using (var serviceScope = app.Services.CreateScope())
+{
+    var dbContext = serviceScope.ServiceProvider.GetRequiredService<RecallDbContext>();
+    DatabaseSeeder.SeedDatabase(dbContext);
+}
 
 // Habilitar arquivos estáticos
 app.UseDefaultFiles();

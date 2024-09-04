@@ -1,27 +1,34 @@
-# Autoware.RecallSystem test
+Ôªø# Autoware.RecallSystem test
 
-Para rodar esse projeto clone o repositÛrio e siga os passos a seguir:
+Para rodar esse projeto clone o reposit√≥rio e siga os passos a seguir:
+
+Adicionei um DataSeed para preencher as tabelas automaticamente, ent√£o  
+√© necess√°rio seguir apenas o passo 1 para criar a inst√¢ncia do SQL Server
+
+Ent√£o √© s√≥ buildar a solu√ß√£o e dar run. üöÄüöÄ
+
+
 
 Primeiro, crie o banco e suas tabelas seguindo os passos abaixo.
 
-Eu prefiro rodar servidores de bancos de dados em inst‚ncias do docker,
-mas se j· tiver um banco rodando È sÛ pular para a parte das queries no passo 3.
+Eu prefiro rodar servidores de bancos de dados em inst√¢ncias do docker,
+mas se j√° tiver um banco rodando √© s√≥ pular para a parte das queries no passo 3.
 
-(Estou usando o WSL2 ent„o alguns comandos podem ser diferentes no Windows).
+(Estou usando o WSL2 ent√£o alguns comandos podem ser diferentes no Windows).
 
-## 1. Criar inst‚ncia de banco no docker
-O primeiro passo È rodar esse comando no seu terminal, e ele ir· baixar e subir 
-a vers„o mais recente do sql server
+## 1. Criar inst√¢ncia de banco no docker
+O primeiro passo √© rodar esse comando no seu terminal, e ele ir√° baixar e subir 
+a vers√£o mais recente do sql server
 
 ``` 
 docker run -v ~/docker --name sqlserver -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=1q2w3e4r@#$" -p 1433:1433 -d mcr.microsoft.com/mssql/server
 
 ```
 
-Se n„o tiver acontecido nenhum erro agora existe uma inst‚ncia do banco na porta 1433
+Se n√£o tiver acontecido nenhum erro agora existe uma inst√¢ncia do banco na porta 1433
 
 ## 2. No seu cliente (estou usando Azure Data Studio)
-Para conectar ao banco È necess·rio escolher o tipo de autenticaÁ„o certa:
+Para conectar ao banco √© necess√°rio escolher o tipo de autentica√ß√£o certa:
 1. Escolha SQL Login
 2. username: sa
 3. password: 1q2w3e4r@#$
@@ -59,11 +66,11 @@ CREATE TABLE ExecucoesRecalls (
 
 ```
 INSERT INTO Recalls (Id, Titulo, Descricao, DataPublicacao) VALUES
-(1, 'TROCA DISCO FREIO', 'Poder· resultar em ruÌdos anormais e deficiÍncia na frenagem.', '2023-10-29'),
-(2, 'ATUALIZA«√O DE SOFTWARE', 'Poder· resultar em funcionamento incorreto do monitoramento dos sensores.', '2019-04-01'),
-(3, 'INSPE«√O SISTEMA DE PARTIDA', 'Poder· resultar em funcionamento incorreto na partida do veÌculo.', '2021-01-30'),
-(4, 'CORROS√O CABO DO ACELERADOR', 'Poder· resultar em quebra no cabo, impedindo a acelaraÁ„o do veÌculo.', '2020-03-15'),
-(5, 'SUBSTITUI«√O SENSOR DO VELOCÕMETRO', 'Poder· resultar em registro incorreto da quilometragem.', '2014-07-10');
+(1, 'TROCA DISCO FREIO', 'Poder√° resultar em ru√≠dos anormais e defici√™ncia na frenagem.', '2023-10-29'),
+(2, 'ATUALIZA√á√ÉO DE SOFTWARE', 'Poder√° resultar em funcionamento incorreto do monitoramento dos sensores.', '2019-04-01'),
+(3, 'INSPE√á√ÉO SISTEMA DE PARTIDA', 'Poder√° resultar em funcionamento incorreto na partida do ve√≠culo.', '2021-01-30'),
+(4, 'CORROS√ÉO CABO DO ACELERADOR', 'Poder√° resultar em quebra no cabo, impedindo a acelara√ß√£o do ve√≠culo.', '2020-03-15'),
+(5, 'SUBSTITUI√á√ÉO SENSOR DO VELOC√çMETRO', 'Poder√° resultar em registro incorreto da quilometragem.', '2014-07-10');
 
 INSERT INTO ExecucoesRecalls (RecallId, Chassi, DataExecucao, Concessionaria) VALUES
 (4, 'CHASSI123456789012', '2024-05-01', 'Horizon Motors'),
@@ -71,7 +78,7 @@ INSERT INTO ExecucoesRecalls (RecallId, Chassi, DataExecucao, Concessionaria) VA
 (5, 'CHASSI234567890123', '2016-10-07', 'Velocity Auto Group');
 ```
 
-Pronto agora o banco est· com as tabelas e os dados de exemplo dos arquivos JSON.
+Pronto agora o banco est√° com as tabelas e os dados de exemplo dos arquivos JSON.
 
-Agora È necess·rio buildar a soluÁ„o
+Agora √© necess√°rio buildar a solu√ß√£o
 
